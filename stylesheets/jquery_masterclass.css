@@ -14,6 +14,15 @@ body {
   padding: 10px;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border-top: 1px solid #888;
+  padding: 4px 20px;
+}
+
 .selected {
   background-color: #ccf;
 }
