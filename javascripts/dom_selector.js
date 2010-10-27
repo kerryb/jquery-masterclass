@@ -5,10 +5,10 @@ $(document).ready(function() {
 });
 
 function highlightSelected() {
-  $(highlighted_selector).css("background-color", "");
+  $(highlighted_selector).removeClass("selected");
   highlighted_selector = $("#selector").val();
   try {
-    $(highlighted_selector).css("background-color", "#ccf");
+    $(highlighted_selector).addClass("selected");
   } catch (error) {
     highlighted_selector = ""
   }
