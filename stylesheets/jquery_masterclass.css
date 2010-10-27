@@ -1,0 +1,15 @@
+body {
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  background-color: #448;
+}
+
+#input label {
+  color: white;
+  margin: 10px;
+}
+
+.panel {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+}
