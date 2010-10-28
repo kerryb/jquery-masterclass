@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("#selector").focus();
-  highlighted_selector = ""
+  highlighted_selector = "";
   $("#selector").keyup(highlightSelected);
 });
 
@@ -10,6 +10,6 @@ function highlightSelected() {
   try {
     $(highlighted_selector).addClass("selected");
   } catch (error) {
-    highlighted_selector = ""
+    highlighted_selector = "";
   }
 }
