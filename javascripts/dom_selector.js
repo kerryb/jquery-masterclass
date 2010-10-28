@@ -1,15 +1,20 @@
 $(document).ready(function() {
   $("#selector").focus();
-  highlighted_selector = "";
   $("#selector").keyup(highlightSelected);
+  function removePreviousHighlighting() {}
 });
 
 function highlightSelected() {
-  $(highlighted_selector).removeClass("selected");
+  try {
+    removePreviousHighlighting();
+  } catch (error) {
+  }
   highlighted_selector = $("#selector").val();
   try {
     $(highlighted_selector).addClass("selected");
   } catch (error) {
-    highlighted_selector = "";
+  }
+  function removePreviousHighlighting() {
+    $(highlighted_selector).removeClass("selected");
   }
 }
