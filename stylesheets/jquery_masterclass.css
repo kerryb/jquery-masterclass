@@ -10,12 +10,11 @@ body {
 }
 
 #input {
-  margin: 0 auto;
+  padding-left: 10px;
 }
 
 #input label {
   color: white;
-  margin: 10px 10px 10px 20px;
 }
 
 .panel {
