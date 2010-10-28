@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  roundPanelCorners();
+  roundCorners();
 });
 
-function roundPanelCorners() {
-  $(".panel").corner();
+function roundCorners() {
+  $(".rounded").corner();
 }
