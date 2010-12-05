@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 function highlightSelected() {
   $("*").removeClass("selected");
-  var highlighted_selector = $("#selector").val();
+  var highlighted_selector = "#sample_content " + $("#selector").val();
   try {
     $(highlighted_selector).addClass("selected");
   } catch (error) {

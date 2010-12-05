@@ -17,8 +17,14 @@
     <div id="sample_content">
       <h1>This is a first-level heading</h1>
       <h2>And this is a second-level heading</h2>
-      <p>This is a paragraph with some <strong>strong</strong> and <em>emphasised</em> text.</p>
-      <p>This is another paragraph.</p>
+      <div id="bar">
+        <div class="foo">
+          <p>This is a paragraph with some <strong>strong</strong> and <em>emphasised</em> text.</p>
+          <p>This is another paragraph.</p>
+          <p>One more paragraph (those were all in a div with a class of 'foo', by the way).</p>
+        </div>
+        <p>And this paragraph isn't in the foo div, but all four are in an enclosing div with an id of 'bar'.</p>
+      </div>
       <h2>Tables</h2>
       <p>Here's a table:</p>
       <table>
@@ -31,6 +37,45 @@
           <tr><td>And this is the last row</td><td></td><td></td></tr>
         </tbody>
       </table>
+      <h2>Forms</h2>
+      <p>The form below also has a class of 'foo'.</p>
+      <form action="#" class="foo">
+        <div>
+          <label for="field_1">Field 1</label>
+          <input type="text" name="field_1" id="field_1" />
+          <label for="field_2">Field 2</label>
+          <input type="text" name="field_2" id="field_2" />
+        </div>
+        <div>
+          <label for="field_3">Field 3</label>
+          <select name="field_3" id="field_3">
+            <option>Foo</option>
+            <option>Bar</option>
+            <option>Baz</option>
+          </select>
+        </div>
+        <div>
+          <label for="checkbox_1">Checkbox 1</label>
+          <input type="checkbox" name="checkbox_1" id="checkbox_1" />
+          <label for="checkbox_2">Checkbox 2</label>
+          <input type="checkbox" name="checkbox_2" id="checkbox_2" />
+        </div>
+        <div>
+          <label for="radio_foo">Foo</label>
+          <input type="radio" name="radio" id="radio_foo" value="foo" />
+          <label for="radio_bar">Bar</label>
+          <input type="radio" name="radio" id="radio_bar" value="bar" />
+          <label for="radio_baz">Baz</label>
+          <input type="radio" name="radio" id="radio_baz" value="baz" />
+        </div>
+        <div>
+          <textarea rows="5" cols="40" id="text">This textarea has an ID of 'text'.</textarea>
+        </div>
+        <div>
+          <input type="submit" value="Button 1" />
+          <input type="submit" value="Button 2" />
+        </div>
+      </form>
     </div>
     <script type="text/javascript" src="javascripts/jquery.js"></script>
     <script type="text/javascript" src="javascripts/jquery.corner.js"></script>

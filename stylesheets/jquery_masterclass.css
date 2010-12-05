@@ -1,12 +1,19 @@
 body {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
   background-color: white;
 }
 
 #controller_panel {
   background-color: #448;
-  padding: 10px;
+  padding: 0.5em;
   position: fixed;
+  right: 0.5em;
+  z-index:100;
+}
+
+form div {
+  margin-top:0.5em;
 }
 
 #input {
@@ -15,21 +22,29 @@ body {
 
 #input label {
   color: white;
-  margin: 10px 10px 10px 20px;
+  margin: 0.5em 0.5em 0.5em 1em;
 }
 
 #sample_content {
   position: relative;
-  top: 50px;
+  top: 4em;
 }
 
 #sample_content table {
   border-collapse: collapse;
 }
 
-#sample_content td {
+#sample_content th, #sample_content td {
+  padding: 0.3em 1em;
+}
+
+#sample_content th {
   border-top: 1px solid #888;
-  padding: 4px 20px;
+  border-bottom: 2px solid #888;
+}
+
+#sample_content td {
+  border-bottom: 1px solid #888;
 }
 
 #sample_content .selected {
