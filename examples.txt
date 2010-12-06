@@ -1,0 +1,12 @@
+| h1 heading                                      | h1                              |
+| h1 and h2 headings                              | h1,h2                           |
+| first element after each h2                     | h2 + *                          |
+| paragraphs anywhere under the div with id 'bar' | #bar p                          |
+| paragraphs directly under the div with id 'bar' | #bar > p                        |
+| paragraphs containing the word 'class'          | p:contains(class)               |
+| paragraphs containing any <strong> text         | p:has(strong)                   |
+| table rows                                      | tr                              |
+| odd rows and headings                           | tr:odd,h1,h2                    |
+| checked checkboxes and active radio buttons     | input:checked                   |
+| checked checkboxes only                         | input:checkbox:checked          |
+| second cell in first non-header table row       | tr:not(:has(th)):first td:eq(1) |
