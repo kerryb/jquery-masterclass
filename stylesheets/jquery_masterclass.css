@@ -50,3 +50,9 @@ form div {
 #sample_content .selected {
   background-color: #ccf;
 }
+
+#sample_content .selected_wrapper {
+  display: inline;
+  margin: 1px;
+  background-color: #ccf;
+}

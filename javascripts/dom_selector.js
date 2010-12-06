@@ -3,18 +3,19 @@ $(document).ready(function() {
 });
 
 var SELECTOR = {
-  highlighted_selector: "",
+  highlighted_elements: "",
   init: function() {
     $("#selector").focus();
     $("#selector").keyup(this.highlightSelected);
   },
   highlightSelected: function() {
-    $(this.highlighted_selector).removeClass("selected");
-    this.highlighted_selector = "#sample_content " + $("#selector").val();
+    $(this.highlighted_elements).removeClass("selected").filter(":checkbox,:radio").unwrap();
+    this.highlighted_elements = "#sample_content " + $("#selector").val();
     try {
-      $(this.highlighted_selector).addClass("selected");
+    $(this.highlighted_elements).addClass("selected").filter(":checkbox,:radio").
+      wrap('<div class="selected_wrapper">');
     } catch (error) {
-      this.highlighted_selector = "";
+      this.highlighted_elements = "";
     }
   }
 }
