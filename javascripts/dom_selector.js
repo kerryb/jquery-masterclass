@@ -3,20 +3,23 @@ $(document).ready(function() {
 });
 
 var SELECTOR = {
-  highlighted_elements: "",
+  highlighted_elements: $(),
   init: function() {
+    this.highlighted_elements = $();
     $("#selector").focus();
     $("#selector").keyup(this.highlightSelected);
     $("input,select,textarea").change(this.highlightSelected);
   },
   highlightSelected: function() {
     $(this.highlighted_elements).removeClass("selected").filter(":checkbox,:radio").unwrap();
-    this.highlighted_elements = "#sample_content " + $("#selector").val();
+    selector = "#sample_content " + $("#selector").val();
     try {
-    $(this.highlighted_elements).addClass("selected").filter(":checkbox,:radio").
-      wrap('<div class="selected_wrapper">');
+      this.highlighted_elements = $(selector);
+      this.highlighted_elements.addClass("selected").filter(":checkbox,:radio").
+        wrap('<div class="selected_wrapper">');
     } catch (error) {
-      this.highlighted_elements = "";
+      // Probably a half-typed selector -- ignore it.
+      this.highlighted_elements = $();
     }
   }
 }
