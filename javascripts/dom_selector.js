@@ -7,6 +7,7 @@ var SELECTOR = {
   init: function() {
     $("#selector").focus();
     $("#selector").keyup(this.highlightSelected);
+    $("input,select,textarea").change(this.highlightSelected);
   },
   highlightSelected: function() {
     $(this.highlighted_elements).removeClass("selected").filter(":checkbox,:radio").unwrap();
